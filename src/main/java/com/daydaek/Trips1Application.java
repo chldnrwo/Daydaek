@@ -1,4 +1,4 @@
-package com.dadaek.demo;
+package com.daydaek;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
