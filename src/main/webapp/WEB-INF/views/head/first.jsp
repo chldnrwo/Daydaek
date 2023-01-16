@@ -180,6 +180,49 @@
 						  </label>
 						</div>         
 	                </div>
+	                
+	           		 <div class="mb-3">
+    					<label for="" class="form-label">
+							주요 맛
+						</label>
+								
+						<div class="form-check">
+						  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+						  <label class="form-check-label" for="flexCheckDefault">
+						   	짠맛
+						  </label>
+						</div>
+						<div class="form-check">
+						  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+						  <label class="form-check-label" for="flexCheckDefault">
+						   	감칠맛
+						  </label>
+						</div>
+						<div class="form-check">
+						  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+						  <label class="form-check-label" for="flexCheckDefault">
+						   	단맛
+						  </label>
+						</div>
+						<div class="form-check">
+						  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+						  <label class="form-check-label" for="flexCheckDefault">
+						   	신맛
+						  </label>
+						</div>
+						<div class="form-check">
+						  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+						  <label class="form-check-label" for="flexCheckDefault">
+						   	쓴맛
+						  </label>
+						</div>
+						<div class="form-check">
+						  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+						  <label class="form-check-label" for="flexCheckDefault">
+						   	얼얼한 맛
+						  </label>
+						</div>
+	                </div>
 					
 
 					<input disabled id="submitButton1" class="btn btn-primary" type="submit" value="가입">
