@@ -78,7 +78,7 @@
 							<input id="FatInput" class="form-control" type="text">
 							
 						</div>
-						<label for="" class="form-label">
+						<label for="" class="form-label" style="padding-top: 5px;">
 							변환된 탄단지 비율 
 						</label>			
 						<div class="flexbox">
@@ -93,11 +93,38 @@
 					
 					<div class="mb-3">
 						<label for="" class="form-label">
-							이름
+							음식의 온도
 						</label>
 						
-						<div class="input-group">
-							<input id="nameInput1" class="form-control" type="text" name="M_NAME">
+						<div class="form-check">
+						  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+						  <label class="form-check-label" for="flexRadioDefault1">
+						    뜨거움
+						  </label>
+						</div>
+						<div class="form-check">
+						  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+						  <label class="form-check-label" for="flexRadioDefault2">
+						    따뜻함
+						  </label>
+						</div>
+						<div class="form-check">
+						  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" checked>
+						  <label class="form-check-label" for="flexRadioDefault3">
+						    중간
+						  </label>
+						</div>
+						<div class="form-check">
+						  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4" checked>
+						  <label class="form-check-label" for="flexRadioDefault4">
+						    시원함
+						  </label>
+						</div>
+						<div class="form-check">
+						  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault5" checked>
+						  <label class="form-check-label" for="flexRadioDefault5">
+						    차가움
+						  </label>
 						</div>
 						
 					</div>
@@ -106,40 +133,54 @@
 					
 	                <div class="mb-3">
     					<label for="" class="form-label">
-							성별
+							국물의 정도
 						</label>
 								
-						<select class="form-select" aria-label="Default select example" name="M_GENDER">
-						  <option selected>선택하세요</option>
-						  <option value="male">남자</option>
-						  <option value="female">여자</option>
-						</select>            
+						<div class="form-check">
+						  <input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioDefault11" checked>
+						  <label class="form-check-label" for="flexRadioDefault11">
+						    많음
+						  </label>
+						</div>
+						<div class="form-check">
+						  <input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioDefault22" checked>
+						  <label class="form-check-label" for="flexRadioDefault22">
+						    자작함
+						  </label>
+						</div>
+						<div class="form-check">
+						  <input class="form-check-input" type="radio" name="flexRadioDefault2" id="flexRadioDefault2" checked>
+						  <label class="form-check-label" for="flexRadioDefault2">
+						    없음
+						  </label>
+						</div>         
 	                </div>
 	                					
+					 <div class="mb-3">
+    					<label for="" class="form-label">
+							야채의 비중
+						</label>
+								
+						<div class="form-check">
+						  <input class="form-check-input" type="radio" name="flexRadioDefault3" id="flexRadioDefault11" checked>
+						  <label class="form-check-label" for="flexRadioDefault11">
+						    높음
+						  </label>
+						</div>
+						<div class="form-check">
+						  <input class="form-check-input" type="radio" name="flexRadioDefault3" id="flexRadioDefault22" checked>
+						  <label class="form-check-label" for="flexRadioDefault22">
+						    중간
+						  </label>
+						</div>
+						<div class="form-check">
+						  <input class="form-check-input" type="radio" name="flexRadioDefault3" id="flexRadioDefault2" checked>
+						  <label class="form-check-label" for="flexRadioDefault2">
+						    적음
+						  </label>
+						</div>         
+	                </div>
 					
-					<div class="mb-3">
-						<label for="" class="form-label">
-							전화번호
-						</label>
-						
-						<div class="input-group">
-							<input id="nameInput1" class="form-control" type="text" name="M_PHONE">
-						</div>
-					</div>
-										
-					<div class="mb-3">
-						<label for="" class="form-label">
-							이메일
-						</label>
-						
-						<div class="input-group">
-							<input id="emailInput1" class="form-control" type="email" name="M_EMAIL">
-							<button id="emailExistButton1" type="button" class="btn btn-outline-secondary">중복확인</button>
-						</div>
-						
-						<div id="emailText1" class="form-text">이메일 중복확인을 해주세요.</div>
-					</div>
-
 
 					<input disabled id="submitButton1" class="btn btn-primary" type="submit" value="가입">
 				
