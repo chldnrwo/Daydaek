@@ -27,6 +27,9 @@
 .flexbox{
 	display: flex;
 }
+.form-check{
+	padding-right: 20px;
+}
 </style>
 
 <meta charset="UTF-8">
@@ -60,9 +63,13 @@
 
 					<div class="mb-3">
 						<label for="" class="form-label">
-							칼로리
+							칼로리(kcal) / 무게(g)
 						</label>
-						<input id="calInput1" class="form-control" type="text" name="D_CAL">
+						<div class="flexbox">
+							<input id="carboInput" class="form-control" type="text">
+							<div style="padding: 0 5px 0 5px;"> : </div>
+							<input id="ProteinInput" class="form-control" type="text">
+						</div>
 						<div id="calText" class="form-text"></div>
 					</div>
 					
@@ -99,13 +106,7 @@
 						<div class="form-check">
 						  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
 						  <label class="form-check-label" for="flexRadioDefault1">
-						    뜨거움
-						  </label>
-						</div>
-						<div class="form-check">
-						  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-						  <label class="form-check-label" for="flexRadioDefault2">
-						    따뜻함
+						    따뜻한 편
 						  </label>
 						</div>
 						<div class="form-check">
@@ -115,15 +116,9 @@
 						  </label>
 						</div>
 						<div class="form-check">
-						  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4" checked>
-						  <label class="form-check-label" for="flexRadioDefault4">
-						    시원함
-						  </label>
-						</div>
-						<div class="form-check">
 						  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault5" checked>
 						  <label class="form-check-label" for="flexRadioDefault5">
-						    차가움
+						    차가운 편
 						  </label>
 						</div>
 						
@@ -187,45 +182,444 @@
 						</label>
 								
 						<div class="form-check">
-						  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+						  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultF">
 						  <label class="form-check-label" for="flexCheckDefault">
 						   	짠맛
 						  </label>
 						</div>
 						<div class="form-check">
-						  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+						  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultF">
 						  <label class="form-check-label" for="flexCheckDefault">
 						   	감칠맛
 						  </label>
 						</div>
 						<div class="form-check">
-						  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+						  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultF">
 						  <label class="form-check-label" for="flexCheckDefault">
 						   	단맛
 						  </label>
 						</div>
 						<div class="form-check">
-						  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+						  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultF">
 						  <label class="form-check-label" for="flexCheckDefault">
 						   	신맛
 						  </label>
 						</div>
 						<div class="form-check">
-						  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+						  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultF">
 						  <label class="form-check-label" for="flexCheckDefault">
 						   	쓴맛
 						  </label>
 						</div>
 						<div class="form-check">
-						  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+						  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultF">
+						  <label class="form-check-label" for="flexCheckDefault">
+						   	고소한 맛
+						  </label>
+						</div>
+						<div class="form-check">
+						  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultF">
 						  <label class="form-check-label" for="flexCheckDefault">
 						   	얼얼한 맛
 						  </label>
 						</div>
 	                </div>
 					
-
-					<input disabled id="submitButton1" class="btn btn-primary" type="submit" value="가입">
+					 <div class="mb-3">
+    					<label for="" class="form-label">
+							사용 육수
+						</label>
+								
+						<div class="form-check">
+						  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultS">
+						  <label class="form-check-label" for="flexCheckDefault">
+						   	돼지육수
+						 </label>
+						</div>
+						<div class="form-check">
+						  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultS">
+						  <label class="form-check-label" for="flexCheckDefault">
+						   	소 육수
+						 </label>
+						</div>
+						<div class="form-check">
+						  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultS">
+						  <label class="form-check-label" for="flexCheckDefault">
+						   	닭 육수
+						 </label>
+						</div>
+						<div class="form-check">
+						  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultS">
+						  <label class="form-check-label" for="flexCheckDefault">
+						   	해물 육수
+						 </label>
+						</div>
+						<div class="form-check">
+						  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultS">
+						  <label class="form-check-label" for="flexCheckDefault">
+						   	채수(채소 육수)
+						 </label>
+						</div>
+						<div class="form-check">
+						  <input class="form-check-input" type="checkboxS" value="" id="flexCheckDefaultS">
+						  <label class="form-check-label" for="flexCheckDefault">
+						   	없음
+						 </label>
+						</div>
+						<div class="form-check">
+						  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultS">
+						  <label class="form-check-label" for="flexCheckDefault">
+						   	기타
+						 </label>
+						 <input type="text" id="etcS"/>
+						</div>
+	                </div>
+	                
+	                 <div class="mb-3">
+    					<label for="" class="form-label">
+							탄수화물 종류
+						</label>
+								
+						<div class="form-check">
+						  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultC">
+						  <label class="form-check-label" for="flexCheckDefault">
+						   	면
+						 </label>
+						</div>
+						<div class="form-check">
+						  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultC">
+						  <label class="form-check-label" for="flexCheckDefault">
+						   	밥
+						 </label>
+						</div>
+						<div class="form-check">
+						  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultC">
+						  <label class="form-check-label" for="flexCheckDefault">
+						   	빵
+						 </label>
+						</div>
+						<div class="form-check">
+						  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultC">
+						  <label class="form-check-label" for="flexCheckDefault">
+						   	튀김
+						 </label>
+						</div>
+						<div class="form-check">
+						  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultC">
+						  <label class="form-check-label" for="flexCheckDefault">
+						   	없거나 적음
+						 </label>
+						</div>
+						<div class="form-check">
+						  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultC">
+						  <label class="form-check-label" for="flexCheckDefault">
+						   	기타
+						 </label>
+						 <input type="text" id="etcC"/>
+						</div>
+	                </div>
+					
+					 <div class="mb-3">
+    					<label for="" class="form-label">
+							주요 재료
+						</label>
+						<div>
+							<label for="" class="form-label">
+								고기류
+							</label>
+						</div>
+						
+						<div class="flexbox">
+							<div class="form-check">
+							  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultC">
+							  <label class="form-check-label" for="flexCheckDefault">
+							   	돼지고기
+							  </label>
+							</div>
+							<div class="form-check">
+							  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultC">
+							  <label class="form-check-label" for="flexCheckDefault">
+							   	소고기
+							  </label>
+							</div>
+							<div class="form-check">
+							  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultC">
+							  <label class="form-check-label" for="flexCheckDefault">
+							   	닭고기
+							  </label>
+							</div>
+						</div>
+							<div class="form-check">
+							  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultC">
+							  <label class="form-check-label" for="flexCheckDefault">
+							   	기타
+							  </label>
+							   <input type="text" id="etcMeat"/>
+							   <button type="button" class="btn btn-primary" id="plusMeat">생성</button>
+							</div>
+						
+						<div>
+							<label for="" class="form-label">
+								해산물
+							</label>
+						</div>
+						
+						<div class="flexbox">
+							<div class="form-check">
+							  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultC">
+							  <label class="form-check-label" for="flexCheckDefault">
+							   	갑각류
+							  </label>
+							</div>
+							<div class="form-check">
+							  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultC">
+							  <label class="form-check-label" for="flexCheckDefault">
+							   	조개류
+							  </label>
+							</div>
+							<div class="form-check">
+							  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultC">
+							  <label class="form-check-label" for="flexCheckDefault">
+							   	생선류
+							  </label>
+							</div>
+						</div>		
+							<div class="form-check">
+							  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultC">
+							  <label class="form-check-label" for="flexCheckDefault">
+							   	기타
+							  </label>
+							   <input type="text" id="etcSea"/>
+							</div>
+							
+						<div>
+							<label for="" class="form-label">
+								채소
+							</label>
+						</div>
+						
+						<div class="flexbox">
+							<div class="form-check">
+							  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultC">
+							  <label class="form-check-label" for="flexCheckDefault">
+							   	감자
+							  </label>
+							</div>
+							<div class="form-check">
+							  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultC">
+							  <label class="form-check-label" for="flexCheckDefault">
+							   	고구마
+							  </label>
+							</div>
+							<div class="form-check">
+							  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultC">
+							  <label class="form-check-label" for="flexCheckDefault">
+							   	생강
+							  </label>
+							</div>
+							<div class="form-check">
+							  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultC">
+							  <label class="form-check-label" for="flexCheckDefault">
+							   	당근
+							  </label>
+							</div>
+							<div class="form-check">
+							  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultC">
+							  <label class="form-check-label" for="flexCheckDefault">
+							   	무
+							  </label>
+							</div>
+							<div class="form-check">
+							  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultC">
+							  <label class="form-check-label" for="flexCheckDefault">
+							   	우엉
+							  </label>
+							</div>
+							<div class="form-check">
+							  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultC">
+							  <label class="form-check-label" for="flexCheckDefault">
+							   	연근
+							  </label>
+							</div>
+							<div class="form-check">
+							  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultC">
+							  <label class="form-check-label" for="flexCheckDefault">
+							   	토란
+							  </label>
+							</div>
+						</div>
+						<div class="flexbox">
+							<div class="form-check">
+							  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultC">
+							  <label class="form-check-label" for="flexCheckDefault">
+							   	양파
+							  </label>
+							</div>
+							<div class="form-check">
+							  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultC">
+							  <label class="form-check-label" for="flexCheckDefault">
+							   	파
+							  </label>
+							</div>
+							<div class="form-check">
+							  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultC">
+							  <label class="form-check-label" for="flexCheckDefault">
+							   	부추
+							  </label>
+							</div>
+							<div class="form-check">
+							  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultC">
+							  <label class="form-check-label" for="flexCheckDefault">
+							   	마늘
+							  </label>
+							</div>
+							<div class="form-check">
+							  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultC">
+							  <label class="form-check-label" for="flexCheckDefault">
+							   	샬럿
+							  </label>
+							</div>
+							<div class="form-check">
+							  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultC">
+							  <label class="form-check-label" for="flexCheckDefault">
+							   	고추
+							  </label>
+							</div>
+							<div class="form-check">
+							  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultC">
+							  <label class="form-check-label" for="flexCheckDefault">
+							   	피망
+							  </label>
+							</div>
+						</div>
+						<div class="flexbox">
+							<div class="form-check">
+							  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultC">
+							  <label class="form-check-label" for="flexCheckDefault">
+							   	파프리카
+							  </label>
+							</div>
+							<div class="form-check">
+							  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultC">
+							  <label class="form-check-label" for="flexCheckDefault">
+							   	가지
+							  </label>
+							</div>
+							<div class="form-check">
+							  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultC">
+							  <label class="form-check-label" for="flexCheckDefault">
+							   	배추
+							  </label>
+							</div>
+							<div class="form-check">
+							  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultC">
+							  <label class="form-check-label" for="flexCheckDefault">
+							   	양배추
+							  </label>
+							</div>
+							<div class="form-check">
+							  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultC">
+							  <label class="form-check-label" for="flexCheckDefault">
+							   	토마토
+							  </label>
+							</div>
+							<div class="form-check">
+							  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultC">
+							  <label class="form-check-label" for="flexCheckDefault">
+							   	시금치
+							  </label>
+							</div>
+						</div>
+						<div class="flexbox">
+							<div class="form-check">
+							  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultC">
+							  <label class="form-check-label" for="flexCheckDefault">
+							   	셀러리
+							  </label>
+							</div>
+							<div class="form-check">
+							  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultC">
+							  <label class="form-check-label" for="flexCheckDefault">
+							   	상추
+							  </label>
+							</div>
+							<div class="form-check">
+							  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultC">
+							  <label class="form-check-label" for="flexCheckDefault">
+							   	양상추
+							  </label>
+							</div>
+							<div class="form-check">
+							  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultC">
+							  <label class="form-check-label" for="flexCheckDefault">
+							   	콩
+							  </label>
+							</div>
+						</div>		
+							<div class="form-check">
+							  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultC">
+							  <label class="form-check-label" for="flexCheckDefault">
+							   	기타
+							  </label>
+							   <input type="text" id="etcSea"/>
+							</div>
+							
+						<div>
+							<label for="" class="form-label">
+								버섯
+							</label>
+						</div>
+						
+						<div class="flexbox">
+							<div class="form-check">
+							  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultC">
+							  <label class="form-check-label" for="flexCheckDefault">
+							   	송로버섯
+							  </label>
+							</div>
+							<div class="form-check">
+							  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultC">
+							  <label class="form-check-label" for="flexCheckDefault">
+							   	송이버섯
+							  </label>
+							</div>
+							<div class="form-check">
+							  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultC">
+							  <label class="form-check-label" for="flexCheckDefault">
+							   	표고버섯
+							  </label>
+							</div>
+							<div class="form-check">
+							  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultC">
+							  <label class="form-check-label" for="flexCheckDefault">
+							    새송이버섯
+							  </label>
+							</div>
+							<div class="form-check">
+							  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultC">
+							  <label class="form-check-label" for="flexCheckDefault">
+							   	양송이버섯
+							  </label>
+							</div>
+						</div>
+						<div class="flexbox">
+							<div class="form-check">
+							  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultC">
+							  <label class="form-check-label" for="flexCheckDefault">
+							   	느타리 버섯/포르치니
+							  </label>
+							</div>
+						</div>
+							<div class="form-check">
+							  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultC">
+							  <label class="form-check-label" for="flexCheckDefault">
+							   	기타
+							  </label>
+							   <input type="text" id="etcMeat"/>
+							</div>
+	                </div>
+					
+					<input disabled id="submitButton1" class="btn btn-primary" type="submit" value="등록">
 				
 				</form>
 			</div>
@@ -253,6 +647,9 @@ document.addEventListener('scroll', onScroll, { passive: true });//스크롤 이
 navigo()
 /* --------------sticky navbar scroll 기능 끝-------------------------------------------------------------------------------------------------- */
 
+document.querySelector("#plusMeat").addEventListener("click", function() {
+	
+});
 </script>
 </body>
 </html>
