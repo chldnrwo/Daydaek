@@ -14,6 +14,7 @@
   width:100%;
   position:fixed !important;
   animation: down 0.5s ease !important;
+  z-index: 289 !important;
 }
 
 @keyframes down {
@@ -85,7 +86,7 @@
 							<input id="FatInput" class="form-control" type="text">
 							
 						</div>
-						<label for="" class="form-label" style="padding-top: 5px;">
+						<!-- <label for="" class="form-label" style="padding-top: 5px;">
 							변환된 탄단지 비율 
 						</label>			
 						<div class="flexbox">
@@ -94,8 +95,7 @@
 							<input id="ProteinInput" class="form-control" type="text" readonly="readonly">
 							<div style="padding: 0 5px 0 5px;"> : </div>
 							<input id="FatInput" class="form-control" type="text" readonly="readonly">
-							
-						</div>
+						</div> -->
 					</div>
 					
 					<div class="mb-3">
@@ -217,13 +217,21 @@
 						   	고소한 맛
 						  </label>
 						</div>
-						<div class="form-check">
+						<div class="form-check" id="tBox">
 						  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultF">
 						  <label class="form-check-label" for="flexCheckDefault">
 						   	얼얼한 맛
 						  </label>
 						</div>
+							<div>
+							  <label class="form-check-label" for="flexCheckDefault">
+							   	기타
+							  </label>
+							   <input type="text" id="etcT"/>
+							   <button type="button" class="btn btn-primary" id="plusT">생성</button>
+							</div>
 	                </div>
+					<br>
 					
 					 <div class="mb-3">
     					<label for="" class="form-label">
@@ -260,20 +268,21 @@
 						   	채수(채소 육수)
 						 </label>
 						</div>
-						<div class="form-check">
+						<div class="form-check" id="sBox">
 						  <input class="form-check-input" type="checkboxS" value="" id="flexCheckDefaultS">
 						  <label class="form-check-label" for="flexCheckDefault">
 						   	없음
 						 </label>
 						</div>
-						<div class="form-check">
-						  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultS">
-						  <label class="form-check-label" for="flexCheckDefault">
-						   	기타
-						 </label>
-						 <input type="text" id="etcS"/>
-						</div>
+							<div>
+							  <label class="form-check-label" for="flexCheckDefault">
+							   	기타
+							  </label>
+							   <input type="text" id="etcS"/>
+							   <button type="button" class="btn btn-primary" id="plusS">생성</button>
+							</div>
 	                </div>
+	                <br>
 	                
 	                 <div class="mb-3">
     					<label for="" class="form-label">
@@ -304,20 +313,21 @@
 						   	튀김
 						 </label>
 						</div>
-						<div class="form-check">
+						<div class="form-check" id="cBox">
 						  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultC">
 						  <label class="form-check-label" for="flexCheckDefault">
-						   	없거나 적음
+						   	탄수화물이 없거나 적음
 						 </label>
 						</div>
-						<div class="form-check">
-						  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultC">
-						  <label class="form-check-label" for="flexCheckDefault">
-						   	기타
-						 </label>
-						 <input type="text" id="etcC"/>
-						</div>
-	                </div>
+						 	<div>
+							  <label class="form-check-label" for="flexCheckDefault">
+							   	기타
+							  </label>
+							   <input type="text" id="etcC"/>
+							   <button type="button" class="btn btn-primary" id="plusC">생성</button>
+							</div>
+	                	</div>
+					<br>
 					
 					 <div class="mb-3">
     					<label for="" class="form-label">
@@ -329,7 +339,7 @@
 							</label>
 						</div>
 						
-						<div class="flexbox">
+						<div class="flexbox" id="meatBox">
 							<div class="form-check">
 							  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultC">
 							  <label class="form-check-label" for="flexCheckDefault">
@@ -349,22 +359,21 @@
 							  </label>
 							</div>
 						</div>
-							<div class="form-check">
-							  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultC">
+							<div>
 							  <label class="form-check-label" for="flexCheckDefault">
 							   	기타
 							  </label>
 							   <input type="text" id="etcMeat"/>
 							   <button type="button" class="btn btn-primary" id="plusMeat">생성</button>
 							</div>
-						
+						<br>	
 						<div>
 							<label for="" class="form-label">
 								해산물
 							</label>
 						</div>
 						
-						<div class="flexbox">
+						<div class="flexbox" id="seaBox">
 							<div class="form-check">
 							  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultC">
 							  <label class="form-check-label" for="flexCheckDefault">
@@ -384,13 +393,14 @@
 							  </label>
 							</div>
 						</div>		
-							<div class="form-check">
-							  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultC">
+							<div>
 							  <label class="form-check-label" for="flexCheckDefault">
 							   	기타
 							  </label>
 							   <input type="text" id="etcSea"/>
+							   <button type="button" class="btn btn-primary" id="plusSea">생성</button>
 							</div>
+						<br>
 							
 						<div>
 							<label for="" class="form-label">
@@ -530,7 +540,7 @@
 							  </label>
 							</div>
 						</div>
-						<div class="flexbox">
+						<div class="flexbox" id="vBox">
 							<div class="form-check">
 							  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultC">
 							  <label class="form-check-label" for="flexCheckDefault">
@@ -556,14 +566,15 @@
 							  </label>
 							</div>
 						</div>		
-							<div class="form-check">
-							  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultC">
+							<div>
 							  <label class="form-check-label" for="flexCheckDefault">
 							   	기타
 							  </label>
-							   <input type="text" id="etcSea"/>
+							   <input type="text" id="etcV"/>
+							   <button type="button" class="btn btn-primary" id="plusV">생성</button>
 							</div>
 							
+						<br>	
 						<div>
 							<label for="" class="form-label">
 								버섯
@@ -602,7 +613,7 @@
 							  </label>
 							</div>
 						</div>
-						<div class="flexbox">
+						<div class="flexbox" id="mBox">
 							<div class="form-check">
 							  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultC">
 							  <label class="form-check-label" for="flexCheckDefault">
@@ -610,16 +621,16 @@
 							  </label>
 							</div>
 						</div>
-							<div class="form-check">
-							  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefaultC">
+							<div>
 							  <label class="form-check-label" for="flexCheckDefault">
 							   	기타
 							  </label>
-							   <input type="text" id="etcMeat"/>
+							   <input type="text" id="etcM"/>
+							   <button type="button" class="btn btn-primary" id="plusM">생성</button>
 							</div>
 	                </div>
-					
-					<input disabled id="submitButton1" class="btn btn-primary" type="submit" value="등록">
+					<br>
+					<input id="submitButton1" class="btn btn-primary" type="submit" value="등록">
 				
 				</form>
 			</div>
@@ -627,10 +638,13 @@
 	</div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
 /* --------------sticky navbar scroll 기능-------------------------------------------------------------------------------------------------- */
 function navigo (){
-  const header = document.querySelector('#nav2'); //헤더부분획득
+  const header = document.querySelector('#nav'); //헤더부분획득
   const headerheight = header.clientHeight;//헤더높이
 document.addEventListener('scroll', onScroll, { passive: true });//스크롤 이벤트
  function onScroll () {
@@ -644,12 +658,58 @@ document.addEventListener('scroll', onScroll, { passive: true });//스크롤 이
    }
  } 
 }
-navigo()
+navigo() 
 /* --------------sticky navbar scroll 기능 끝-------------------------------------------------------------------------------------------------- */
 
-document.querySelector("#plusMeat").addEventListener("click", function() {
-	
-});
+ $("#plusMeat").on("click", function() {
+	 const nMeat = document.querySelector('#etcMeat').value; 
+
+      $("#meatBox").after('<div class="form-check" id="meat1"></div>');
+      $("#meat1").append('<input class="form-check-input" type="checkbox" value="" id="meat2">');
+      $("#meat2").after('<label class="form-check-label" for="flexCheckDefault">'+nMeat+'</label>');			  
+      });
+ $("#plusSea").on("click", function() {
+	 const nSea = document.querySelector('#etcSea').value; 
+
+     $("#seaBox").after('<div class="form-check" id="sea1"></div>');
+     $("#sea1").append('<input class="form-check-input" type="checkbox" value="" id="sea2">');
+     $("#sea2").after('<label class="form-check-label" for="flexCheckDefault">'+nSea+'</label>');			  
+     });
+ $("#plusV").on("click", function() {
+	 const nV = document.querySelector('#etcV').value; 
+
+     $("#vBox").after('<div class="form-check" id="v1"></div>');
+     $("#v1").append('<input class="form-check-input" type="checkbox" value="" id="v2">');
+     $("#v2").after('<label class="form-check-label" for="flexCheckDefault">'+nV+'</label>');			  
+     });
+ $("#plusM").on("click", function() {
+	 const nM = document.querySelector('#etcM').value; 
+
+     $("#mBox").after('<div class="form-check" id="m1"></div>');
+     $("#m1").append('<input class="form-check-input" type="checkbox" value="" id="m2">');
+     $("#m2").after('<label class="form-check-label" for="flexCheckDefault">'+nM+'</label>');			  
+     });
+ $("#plusC").on("click", function() {
+	 const nC = document.querySelector('#etcC').value; 
+
+     $("#cBox").after('<div class="form-check" id="c1"></div>');
+     $("#c1").append('<input class="form-check-input" type="checkbox" value="" id="c2">');
+     $("#c2").after('<label class="form-check-label" for="flexCheckDefault">'+nC+'</label>');			  
+     });
+ $("#plusT").on("click", function() {
+	 const nT = document.querySelector('#etcT').value; 
+
+     $("#tBox").after('<div class="form-check" id="t1"></div>');
+     $("#t1").append('<input class="form-check-input" type="checkbox" value="" id="t2">');
+     $("#t2").after('<label class="form-check-label" for="flexCheckDefault">'+nT+'</label>');			  
+     });
+ $("#plusS").on("click", function() {
+	 const nS = document.querySelector('#etcS').value; 
+
+     $("#sBox").after('<div class="form-check" id="s1"></div>');
+     $("#s1").append('<input class="form-check-input" type="checkbox" value="" id="s2">');
+     $("#s2").after('<label class="form-check-label" for="flexCheckDefault">'+nS+'</label>');			  
+     });
 </script>
 </body>
 </html>

@@ -53,11 +53,8 @@ padding: 0 15px 0 15px;
          href="${onLineLink }">
           <span class="font">
           	<div>
-          		Activity
+          		Daydaek
           	</div>
-          	<div>
-          		On/Off
-          	</div> 
           </span>
          </a>
         </li>
