@@ -1,3 +1,9 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8" isELIgnored="false"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="my" tagdir="/WEB-INF/tags" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<c:set var="path" value="${ pageContext.request.contextPath }"/>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,51 +26,27 @@
 
         <div class = "meal-search-box">
           <input type = "text" class = "search-control" placeholder="Enter an ingredient" id = "search-input">
-          <button type = "submit" class = "search-btn btn" id = "search-btn" onclick="search()">
+          <button type = "submit" class = "search-btn btn" id = "search-btn">
             <i class = "fas fa-search"></i>
           </button>
         </div>
+       	<div>${a}</div>
+        <input type = "text" id = "trans" value="${a}">
       </div>
 
       <div class = "meal-result">
         <h2 class = "title">Your Search Results:</h2>
         <div id= "meal">
-          <!-- meal item -->
-          <!-- <div class = "meal-item">
-            <div class = "meal-img">
-              <img src = "food.jpg" alt = "food">
-            </div>
-            <div class = "meal-name">
-              <h3>Potato Chips</h3>
-              <a href = "#" class = "recipe-btn">Get Recipe</a>
-            </div>
-          </div> -->
-          <!-- end of meal item -->
         </div>
       </div>
 
 
       <div class = "meal-details">
-        <!-- recipe close btn -->
         <button type = "button" class = "btn recipe-close-btn" id = "recipe-close-btn">
           <i class = "fas fa-times"></i>
         </button>
 
-        <!-- meal content -->
         <div class = "meal-details-content">
-          <!-- <h2 class = "recipe-title">Meals Name Here</h2>
-          <p class = "recipe-category">Category Name</p>
-          <div class = "recipe-instruct">
-            <h3>Instructions:</h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo blanditiis quis accusantium natus! Porro, reiciendis maiores molestiae distinctio veniam ratione ex provident ipsa, soluta suscipit quam eos velit autem iste!</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquam voluptatibus ad obcaecati magnam, esse numquam nisi ut adipisci in?</p>
-          </div>
-          <div class = "recipe-meal-img">
-            <img src = "food.jpg" alt = "">
-          </div>
-          <div class = "recipe-link">
-            <a href = "#" target = "_blank">Watch Video</a>
-          </div> -->
         </div>
       </div>
     </div>
@@ -73,6 +55,8 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script>
+  const ctx = "${pageContext.request.contextPath}";
+/*-------------------------------ninja api------------------------------------------------*/
   function search(){
   var query = '1lb brisket and fries'
 	  $.ajax({
@@ -88,6 +72,25 @@
 	      }
 	  });	  
   }
+/*-------------------------------ninja api 끝------------------------------------------------*/
+/*-------------------------------입력 받은 값은 파파고로--------------------------------------------*/
+document.querySelector("#search-btn").addEventListener("click", function() {
+	const str = document.querySelector("#search-input").value;
+	
+	fetch(`\${ctx}/head/laboPapago`,{
+		method : "post",
+		headers : {
+			"Content-Type" : "application/json"
+		},
+		body : JSON.stringify(str)
+	})
+	/* .then(res => res.json()) */
+	.then(data => {
+		document.querySelector("#search-input").value = "";
+		})
+	
+})
+/*------------------------------입력 받은 값은 파파고로 끝-------------------------------------------------*/
   </script>
 </body>
 </html>
