@@ -30,8 +30,8 @@
             <i class = "fas fa-search"></i>
           </button>
         </div>
-       	<div>${a}</div>
-        <input type = "text" id = "trans" value="${a}">
+       	
+        <input type = "text" style="display:none" id = "trans">
       </div>
 
       <div class = "meal-result">
@@ -58,7 +58,7 @@
   const ctx = "${pageContext.request.contextPath}";
 /*-------------------------------ninja api------------------------------------------------*/
   function search(){
-  var query = '1lb brisket and fries'
+  var query = document.querySelector("#trans").value;
 	  $.ajax({
 	      method: 'GET',
 	      url: 'https://api.api-ninjas.com/v1/nutrition?query=' + query,
@@ -75,21 +75,31 @@
 /*-------------------------------ninja api 끝------------------------------------------------*/
 /*-------------------------------입력 받은 값은 파파고로--------------------------------------------*/
 document.querySelector("#search-btn").addEventListener("click", function() {
-	const str = document.querySelector("#search-input").value;
-	
-	fetch(`\${ctx}/head/laboPapago`,{
-		method : "post",
-		headers : {
-			"Content-Type" : "application/json"
-		},
-		body : JSON.stringify(str)
-	})
-	/* .then(res => res.json()) */
-	.then(data => {
-		document.querySelector("#search-input").value = "";
-		})
-	
-})
+  const str = document.querySelector("#search-input").value;
+
+  fetch(`${ctx}/head/laboPapago`, {
+    method: "post",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(str)
+  })
+  .then(res => res.json())
+  .then(res => {
+    // JSON 데이터에서 "name" 필드의 값을 가져옵니다.
+    const name = res.name;
+    console.log(name);
+    return name;
+  })
+  .then(name => {
+    document.querySelector("#search-input").value = "";
+    document.querySelector("#trans").value = name;
+    search();
+  })
+  .catch(err => {
+    console.error(err);
+  });
+});
 /*------------------------------입력 받은 값은 파파고로 끝-------------------------------------------------*/
   </script>
 </body>

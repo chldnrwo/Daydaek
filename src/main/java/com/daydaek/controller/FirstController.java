@@ -29,6 +29,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.daydaek.service.FirstService;
 import com.fasterxml.jackson.databind.JsonNode;
@@ -47,18 +48,20 @@ public class FirstController {
 
 	}
 	
+	
 	@GetMapping("labo2")
 	public void labo2(
 			String trans,
 			Model model
 			) throws Exception {
 		
-		//System.out.println("dd");
 		String a = trans;
 		System.out.println(a);
 		model.addAttribute("a", a);
+		
 	}
 	
+	@ResponseBody
 	@PostMapping("laboPapago")
 	public String laboPapago(
 			@RequestBody String str,
@@ -95,7 +98,12 @@ public class FirstController {
         //System.out.println(trans);
         
         //trans를 labo2로 끌고와야된다. 리다이렉트가 안됨
-        return "redirect:/head/labo2?trans="+trans;
+        
+        //return "redirect:/head/labo2?trans="+trans;
+        
+        JSONObject response = new JSONObject();
+        response.put("name", trans);
+        return response.toString();
 	}
 	 private static String post(String apiUrl, Map<String, String> requestHeaders, String text){
 	        HttpURLConnection con = connect(apiUrl);
